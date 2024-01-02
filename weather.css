@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 body{
-    
-     background-color: rgb(174, 209, 251);
+    background-image: url(./weather.jpg);
+    object-fit: contain;
     height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: 'Caveat', cursive;
 }
 .main{
@@ -21,40 +21,46 @@ body{
     flex-direction: column;
    justify-content: space-around;
     align-items: center;
-   background-color: rgb(252, 252, 252);
-    border-radius: 3rem;
+   background-color: rgba(0, 0, 0, 0.545);
+    border-radius: 2rem;
     gap: 10px;
     font-size: 2rem;
     font-family: 'Abel', sans-serif;
-    /* padding: 10px; */
+    color: rgba(240, 255, 255, 0.966);
 }
 #search input, #search button{
-    font-size: 1.5rem;
-    padding: 4px;
-    outline: none;
-   border: 0.3px solid;
+   font-size: 1.4rem;
+    padding: 1.2rem;
    border-radius: 3rem;
     cursor: pointer;
+    color: rgba(240, 248, 255, 0.815);
+    transition: all 0.4s ease-out;
+    background-color: rgba(0, 0, 0, 0.551);
+}
+ #search button:hover{
+    transform: scale(1.1);
+    background-color: white;   
+    color: black;
 }
 #search button{
-    background-image: linear-gradient(to right, #4a47ff , #0099ff );
+   background-color: rgba(0, 0, 0, 0.712);
     color: white;
-    padding: 0,5rem 1.5rem;
+    padding: 1rem;
+}
+label,h2{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 400;
 }
 label{
-    font-size: 3rem;
-    text-transform: capitalize;
-    font-family:'Times New Roman', Times, serif;
+    padding: 1rem;
 }
-
 h1{
-    margin-bottom: 5rem;
     font-size: 4rem;
-    font-weight: 900;
+    color: black;
 }
-h3{
-    font-size: 3rem;
-    text-transform: capitalize;
-    font-family:'Times New Roman', Times, serif;
+#inner,#weather{
+    padding: 1.2rem;
 }
 

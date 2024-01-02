@@ -49,7 +49,7 @@ fetch(url,options)
 .then(data =>
     { console.log(data)
         label.innerHTML= `lon-${longitude} & lat-${latitude}`;
-        temp.innerHTML= `Temperature  ${data.temp} °C`;
+        temp.innerHTML= ` ${data.temp} °C`;
         p[0].innerHTML= `Max temp-${data.max_temp}°C & Min temp-${data.min_temp}°C`
         p[1].innerHTML=`Feels like-${data.feels_like}°C`
         p[2].innerHTML=`Humidity-${data.humidity}%`
@@ -81,7 +81,7 @@ function getch(){
         { return response.json()})
     .then(data =>
         { label.innerHTML= city;
-            temp.innerHTML=  `Temperature ${data.temp} °C`;
+            temp.innerHTML=  `${data.temp} °C`;
             p[0].innerHTML= `Max temp-${data.max_temp}°C & Min temp-${data.min_temp}°C`
             p[1].innerHTML=`Feels like-${data.feels_like}°C`
             p[2].innerHTML=`Humidity-${data.humidity}%`
