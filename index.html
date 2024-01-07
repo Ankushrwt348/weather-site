@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/0bc203b0aa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="weather.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/0bc203b0aa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="weather.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
-      <h1>WEATHER site</h1>
-      <div id="search">
-      
-    <input type="text" id="city" placeholder="city">   
-    
-     <button onclick="getch()"><i class="fa-solid fa-magnifying-glass" style="color: #fafafa;"></i></button>
+  <h1>WEATHER site</h1>
+
+  <div id="search">
+
+    <input type="text" id="city" placeholder="city">
+
+    <button onclick="getch()"><i class="fa-solid fa-magnifying-glass" style="color: #fafafa;"></i></button>
+  </div>
+  <br>
+  <div class="main">
+    <h2 id="temp">Enter the location</h2>
+    <label for="city"></label>
+    <p id="weather"></p>
+    <div id="inner">
+      <p></p>
+      <p></p>
+      <p></p>
     </div>
-    <br>
-     <div class="main">
-    <label for="city">Getting temperature</label>
-     <h2 id="temp"></h2>
-     <p id="weather"></p>
-     <div id="inner">
-      <p></p>
-      <p></p>
-      <p></p>
-     </div>
-   </div>
-    <script src="weather.js"></script>
+  </div>
+  <script src="weather.js"></script>
 
 
 
 </body>
+
 </html>
