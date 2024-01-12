@@ -49,9 +49,9 @@ fetch(url,options)
 .then(data =>
     { console.log(data)
         label.innerHTML= `lon-${longitude} & lat-${latitude}`;
-        temp.innerHTML= `Temp-> ${data.temp} °C`;
-        p[0].innerHTML= `Max temp-${data.max_temp}°C & Min temp-${data.min_temp}°C`
-        p[1].innerHTML=`Feels like-${data.feels_like}°C`
+        temp.innerHTML= `Temp ${data.temp} °C`;
+        p[0].innerHTML= `Max temp ${data.max_temp}°C & Min temp ${data.min_temp}°C`
+        p[1].innerHTML=`Feels like ${data.feels_like}°C`
         p[2].innerHTML=`Humidity-${data.humidity}%`
         p[3].innerHTML=`Wind Speed-${data.wind_speed}km/h`
     });
@@ -81,10 +81,10 @@ function getch(){
         { return response.json()})
     .then(data =>
         { 
-            label.innerHTML= city;
+            label.innerHTML= `location- ${city}`;
             temp.innerHTML=  `Temperature ${data.temp} °C`;
-            p[0].innerHTML= `Max temp-${data.max_temp}°C & Min temp-${data.min_temp}°C`
-            p[1].innerHTML=`Feels like-${data.feels_like}°C`
+            p[0].innerHTML= `Max temp ${data.max_temp}°C & Min temp ${data.min_temp}°C`
+            p[1].innerHTML=`Feels like ${data.feels_like}°C`
             p[2].innerHTML=`Humidity-${data.humidity}%`
             p[3].innerHTML=`Wind Speed-${data.wind_speed}km/h`
         });
