@@ -47,13 +47,17 @@ fetch(url,options)
 .then(response => 
     { return response.json()})
 .then(data =>
-    { console.log(data)
+    { 
+        if(data.temp==undefined){
+            alert('check the city')
+        }else{
         label.innerHTML= `lon-${longitude} & lat-${latitude}`;
         temp.innerHTML= `Temp ${data.temp} °C`;
         p[0].innerHTML= `Max temp ${data.max_temp}°C & Min temp ${data.min_temp}°C`
         p[1].innerHTML=`Feels like ${data.feels_like}°C`
         p[2].innerHTML=`Humidity-${data.humidity}%`
         p[3].innerHTML=`Wind Speed-${data.wind_speed}km/h`
+        }
     });
 }
 
@@ -63,7 +67,7 @@ fetch(url,options)
 function getch(){  
     const city = document.getElementById('city').value;
     if (city === null || city.trim() === ""){
-       alert("enter the valid city")
+       alert("check the city")
     }
     else{
     
@@ -79,16 +83,18 @@ function getch(){
     fetch(url,options)
     .then(response => 
         { return response.json()})
-    .then(data =>
-        { 
+    .then(data =>{
+         if(data.temp===undefined){
+            alert('check the city')
+        }else{
             label.innerHTML= `location- ${city}`;
             temp.innerHTML=  `Temperature ${data.temp} °C`;
             p[0].innerHTML= `Max temp ${data.max_temp}°C & Min temp ${data.min_temp}°C`
             p[1].innerHTML=`Feels like ${data.feels_like}°C`
             p[2].innerHTML=`Humidity-${data.humidity}%`
             p[3].innerHTML=`Wind Speed-${data.wind_speed}km/h`
+        }
         });
-    
     }
 }
 
